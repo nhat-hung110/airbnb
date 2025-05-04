@@ -1,0 +1,18 @@
+
+:root {
+    --main-color: #ff385c;
+    --text-dark-color: #1b1b1b;
+    --text-light-color: #707070;
+
+}
+
+* {
+    box-sizing: inherit;
+  }
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+  }
