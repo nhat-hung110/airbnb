@@ -1,3 +1,4 @@
+/* Header navbar */
 .header__navbar {
   width: 100%;
   height: px;
@@ -48,7 +49,7 @@
 .header__user-host:hover,
 .header__user-icon:hover {
   cursor: pointer;
-  background-color: #f1f1f1;
+  background-color: var(--background-hover-color);
   color: var(--text-dark-color);
   border-radius: 50px;
 }
@@ -92,4 +93,249 @@
 .header__user-info-acc {
   font-size: 3rem;
   padding: 8px 16px;
+}
+
+/* Search bar */
+.header__search {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.search__bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: solid 1px var(--border-color);
+  border-radius: 50px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.search__place,
+.search__check-in,
+.search__check-out,
+.search__guess {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 12px 32px;
+  position: relative;
+  border-radius: 35px;
+}
+
+.search__place::after,
+.search__check-in::after,
+.search__check-out::after {
+  content: "";
+  border-right: solid 1px #999;
+  height: 25px;
+  position: absolute;
+  right: 0;
+}
+
+.search__place:hover,
+.search__check-in:hover,
+.search__check-out:hover,
+.search__guess:hover {
+  background-color: var(--background-hover-color);
+  cursor: pointer;
+}
+
+.search__place,
+.search__guess {
+  padding-right: 100px;
+}
+
+.search__check-in {
+}
+
+.search__check-out {
+}
+
+.search__guess {
+}
+
+.search__icon {
+  width: 46px;
+  height: 46px;
+  padding: 16px;
+  color: #fff;
+  background-color: var(--main-color);
+  border-radius: 50px;
+  margin-right: 10px;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+}
+
+.search--title {
+  display: block;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  color: var(--text-dark-color);
+}
+
+.search--text {
+  display: block;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: var(--text-light-color);
+}
+
+/* Suggest place */
+.suggest__place {
+  width: 430px;
+  height: 330px;
+  position: absolute;
+  top: 110%;
+  left: auto;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+  overflow-y: hidden;
+  display: none;
+}
+
+.suggest__container {
+  height: 100%;
+  overflow-y: scroll;
+  margin-right: 5px;
+}
+
+.suggest__heading {
+  display: block;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  padding: 30px 36px 8px;
+  color: var(--text-dark-color);
+}
+
+.suggest__info {
+  margin: 0 8px 0 28px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.suggest__info:last-child {
+  margin-bottom: 30px;
+}
+
+.suggest__info:hover {
+  background-color: var(--background-hover-color);
+  cursor: pointer;
+}
+
+.suggest__info-img {
+  width: 56px;
+  height: 56px;
+}
+
+.suggest__info-place {
+  display: flex;
+  flex-direction: column;
+  margin-left: 16px;
+}
+
+.suggest__info-place--title {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: var(--text-dark-color);
+}
+
+.suggest__info-place--desc {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: var(--text-light-color);
+}
+
+/* Check-in day */
+.check-in__day{
+  width: 430px;
+  height: 330px;
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+  overflow-y: hidden;
+  display: none;
+}
+
+.check-in__heading {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 40px;
+  background-color: #e8e8e8;
+  border-radius: 20px;
+  user-select: none;
+}
+
+.check-in__heading-time {
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: block;
+  padding: 16px;
+  margin: 4px;
+  border-radius: 18px;
+  text-align: center;
+  width: 33%;
+}
+
+.check-in__heading--select {
+  background-color: #fff;
+}
+
+.calendar {
+  text-align: center;
+}
+
+.calendar__heading {
+  font-size: 1.8rem;
+  margin: 14px 0;
+  color: var(--text-dark-color);
+  user-select: none;
+}
+
+.calendar__heading i {
+  float: right;
+}
+
+.calendar__heading i:hover {
+  color: var(--text-light-color);
+  cursor: pointer;
+}
+
+.calendar__row {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.calendar__column {
+  width: 14.286%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.calendar__week-day .calendar__column {
+  color: var(--main-color);
+  user-select: none;
+}
+
+.calendar__day .calendar__column:hover {
+  border: 2px solid #666;
+  cursor: pointer;
+}
+
+.calendar__day .calendar__column:nth-child(-n + 3):hover {
+  border: none;
+  cursor: default;
 }
