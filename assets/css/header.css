@@ -1,12 +1,19 @@
 /* Header navbar */
+header {
+  padding-bottom: 30px;
+}
+
 .header__navbar {
   width: 100%;
-  height: px;
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 40px;
   margin: 0;
+  position: fixed;
+  background-color: white;
+  z-index: 1;
 }
 
 .header__logo {
@@ -100,6 +107,7 @@
   display: flex;
   width: 100%;
   justify-content: center;
+  padding-top: 80px;
 }
 
 .search__bar {
@@ -111,16 +119,62 @@
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
 }
 
+.search__bar:has(input:focus) {
+  background-color: var(--background-hover-color);
+}
+
+.search__bar:has(input:focus) .search__check-in,
+.search__bar:has(input:focus) .search__check-out,
+.search__bar:has(input:focus) .search__guess {
+  background-color: var(--background-hover-color);
+}
+
+.search__bar:has(input:focus) .search__place {
+  background-color: #fff;
+  box-shadow: 0 1px 1px #999;
+}
+
+.search__place-wrapper {
+  height: 100%;
+}
+
+.search__place:has(input:focus):hover #search__place--text {
+  background-color: #fff;
+}
+
 .search__place,
 .search__check-in,
-.search__check-out,
-.search__guess {
+.search__check-out {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: baseline;
+  height: 100%;
   padding: 12px 32px;
+  margin: 0;
   position: relative;
   border-radius: 35px;
+  border: none;
+  background-color: #fff;
+}
+
+.search__guess {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 12px 0px 12px 32px;
+  position: relative;
+  border-radius: 35px;
+  border: none;
+  background-color: #fff;
+}
+
+.search__guess--add {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  padding-right: 90px;
 }
 
 .search__place::after,
@@ -141,8 +195,7 @@
   cursor: pointer;
 }
 
-.search__place,
-.search__guess {
+.search__place {
   padding-right: 100px;
 }
 
@@ -153,6 +206,10 @@
 }
 
 .search__guess {
+}
+
+.search__place--input {
+  height: 100%;
 }
 
 .search__icon {
@@ -166,22 +223,40 @@
   font-size: 1.6rem;
   display: flex;
   align-items: center;
+  float: right;
 }
 
 .search--title {
   display: block;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   line-height: 1.6rem;
   color: var(--text-dark-color);
 }
 
 .search--text {
   display: block;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   line-height: 1.8rem;
   color: var(--text-light-color);
 }
 
+#search__place--text {
+  border: none;
+  padding: 0;
+  font-size: 1.6rem;
+}
+
+#search__place--text:focus {
+  outline: none;
+}
+
+.search__place:has(input:focus) .suggest__place {
+  display: block;
+}
+
+.search__place:hover #search__place--text {
+  background-color: var(--background-hover-color);
+}
 /* Suggest place */
 .suggest__place {
   width: 430px;
@@ -193,6 +268,12 @@
   border-radius: 30px;
   overflow-y: hidden;
   display: none;
+  z-index: 2;
+  background-color: white;
+}
+
+.search__place-wrapper:has(input:focus) .suggest__place {
+  display: block;
 }
 
 .suggest__container {
@@ -250,7 +331,7 @@
 }
 
 /* Check-in day */
-.check-in__day{
+.check-in__day {
   width: 430px;
   height: 330px;
   position: absolute;

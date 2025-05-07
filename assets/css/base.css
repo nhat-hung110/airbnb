@@ -20,3 +20,9 @@ html {
 body {
   margin: 0;
 }
+
+.row{
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+}
