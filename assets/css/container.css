@@ -1,22 +1,33 @@
 .container {
-  border-top: 1px solid #e2e2e2;
   margin: 0 40px;
 }
 
 .category {
   padding-top: 25px;
+  border-top: 1px solid #e2e2e2;
   display: flex;
   align-items: center;
   position: sticky;
-  top: 80px;
+  top: 78px;
   background-color: #fff;
   z-index: 1;
 }
 
+.category::before{
+  content: "";
+  position: absolute;
+  left: -8px;
+  top: 0;
+  height: 100%;
+  width: 10px;
+  background-color: #fff;
+}
+
 .category__list {
+  padding-bottom: 20px;
   display: flex;
   align-items: center;
-  width: 66.6666%;
+  width: 75%;
   overflow: auto;
 }
 
@@ -64,7 +75,7 @@
 }
 
 .category__button {
-  width: 33.3333%;
+  width: 25%;
   display: flex;
   align-items: center;
 }
@@ -103,7 +114,9 @@
 
 /* Cac lua chon phong */
 .product {
-  margin-top: 20px;
+
+  display: flex;
+  justify-content: center;
 }
 
 .product__list {
@@ -113,8 +126,7 @@
 
 .product__item {
   width: 25%;
-  height: 366px;
-  padding: 0 12px;
+  padding: 0 12px 24px;
   overflow: hidden;
   cursor: pointer;
   position: relative;
@@ -153,7 +165,7 @@
 
 .product__item-img img {
   width: 100%;
-  height: 264px;
+  aspect-ratio: 1;
   object-fit: cover;
   border-radius: 15px;
 }
@@ -192,6 +204,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 40px;
+
 }
 
 .container__footer div {

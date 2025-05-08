@@ -1,7 +1,8 @@
 .footer {
   background-color: var(--background-hover-color);
-  margin-top: 40px;
+ padding: 0 40px;
 }
+
 
 .footer__heading {
   display: flex;
@@ -26,6 +27,11 @@
   font-weight: 600;
   margin: 12px 0;
   color: #666;
+}
+
+.footer__category-item:hover{
+  color: var(--text-dark-color);
+  cursor: pointer;
 }
 
 .footer__help {
@@ -54,6 +60,7 @@
 
 .footer__social {
   display: flex;
+  flex-direction: row-reverse;
   justify-content: space-between;
   padding: 25px 0;
   font-size: 1.3rem;
@@ -78,6 +85,8 @@
 }
 
 .footer__social-icon {
+  display: flex;
+  align-items: center;
   font-weight: 600;
   font-size: 1.5rem;
 }

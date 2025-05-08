@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./assets/css/header.css" />
     <link rel="stylesheet" href="./assets/css/container.css" />
     <link rel="stylesheet" href="./assets/css/footer.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -29,11 +30,6 @@
           <span class="header__logo-text">airbnb</span>
         </div>
 
-        <div class="header__service">
-          <span class="header__service-home">Nhà</span>
-          <span class="header__service-exp">Trải nghiệm</span>
-        </div>
-
         <div class="header__user">
           <span class="header__user-host">Cho thuê chỗ ở qua Airbnb</span>
           <i class="header__user-icon fa-solid fa-earth-asia"></i>
@@ -44,6 +40,10 @@
         </div>
       </div>
       <div class="header__search">
+        <div class="header__service">
+          <span class="header__service-home">Nhà</span>
+          <span class="header__service-exp">Trải nghiệm</span>
+        </div>
         <div class="search__bar">
           <div class="search__place-wrapper">
             <label class="search__place--input" for="search__place--text">
@@ -217,7 +217,7 @@
     </header>
 
     <div class="container">
-      <div class="category row">
+      <div class="category">
         <div class="category__list">
           <div class="category__item">
             <div class="category__item-heading">
@@ -355,7 +355,7 @@
 
       <div class="product">
         <div class="product__list row">
-          <div class="product__item">
+          <div class="product__item m-3">
             <div class="product__item-like">
               <div class="product__item-like--text">Được khách yêu thích</div>
               <div class="product__item-like--icon">
@@ -385,7 +385,7 @@
               </div>
             </div>
           </div>
-          <div class="product__item">
+          <div class="product__item m-3">
             <div class="product__item-like">
               <div class="product__item-like--text">Được khách yêu thích</div>
               <div class="product__item-like--icon">
@@ -415,7 +415,7 @@
               </div>
             </div>
           </div>
-          <div class="product__item">
+          <div class="product__item m-3">
             <div class="product__item-like">
               <div class="product__item-like--text">Được khách yêu thích</div>
               <div class="product__item-like--icon">
@@ -445,7 +445,7 @@
               </div>
             </div>
           </div>
-          <div class="product__item">
+          <div class="product__item m-3">
             <div class="product__item-like">
               <div class="product__item-like--text">Được khách yêu thích</div>
               <div class="product__item-like--icon">
@@ -475,7 +475,7 @@
               </div>
             </div>
           </div>
-          <div class="product__item">
+          <div class="product__item m-3">
             <div class="product__item-like">
               <div class="product__item-like--text">Được khách yêu thích</div>
               <div class="product__item-like--icon">
@@ -505,7 +505,7 @@
               </div>
             </div>
           </div>
-          <div class="product__item">
+          <div class="product__item m-3">
             <div class="product__item-like">
               <div class="product__item-like--text">Được khách yêu thích</div>
               <div class="product__item-like--icon">
@@ -535,7 +535,7 @@
               </div>
             </div>
           </div>
-          <div class="product__item">
+          <div class="product__item m-3">
             <div class="product__item-like">
               <div class="product__item-like--text">Được khách yêu thích</div>
               <div class="product__item-like--icon">
@@ -565,7 +565,7 @@
               </div>
             </div>
           </div>
-          <div class="product__item">
+          <div class="product__item m-3">
             <div class="product__item-like">
               <div class="product__item-like--text">Được khách yêu thích</div>
               <div class="product__item-like--icon">
@@ -595,7 +595,7 @@
               </div>
             </div>
           </div>
-          <div class="product__item">
+          <div class="product__item m-3">
             <div class="product__item-like">
               <div class="product__item-like--text">Được khách yêu thích</div>
               <div class="product__item-like--icon">
@@ -625,7 +625,7 @@
               </div>
             </div>
           </div>
-          <div class="product__item">
+          <div class="product__item m-3">
             <div class="product__item-like">
               <div class="product__item-like--text">Được khách yêu thích</div>
               <div class="product__item-like--icon">
@@ -655,7 +655,7 @@
               </div>
             </div>
           </div>
-          <div class="product__item">
+          <div class="product__item m-3">
             <div class="product__item-like">
               <div class="product__item-like--text">Được khách yêu thích</div>
               <div class="product__item-like--icon">
@@ -685,7 +685,7 @@
               </div>
             </div>
           </div>
-          <div class="product__item">
+          <div class="product__item m-3">
             <div class="product__item-like">
               <div class="product__item-like--text">Được khách yêu thích</div>
               <div class="product__item-like--icon">
@@ -719,7 +719,7 @@
       </div>
 
       <div class="container__footer">
-        <h1>Tiếp tuc khám phá</h1>
+        <h1>Tiếp tục khám phá</h1>
         <div>Hiển thị thêm</div>
       </div>
     </div>
@@ -730,18 +730,18 @@
         <div class="footer__heading-category">Danh mục</div>
       </div>
       <div class="footer__category row">
-        <div class="footer__category-item">Hồ bơi</div>
-        <div class="footer__category-item">Bắc cực</div>
-        <div class="footer__category-item">Khu cắm trại</div>
-        <div class="footer__category-item">Lâu đài</div>
-        <div class="footer__category-item">Nông thôn</div>
-        <div class="footer__category-item">Nhà dưới lòng đất</div>
-        <div class="footer__category-item">Nhà nhỏ</div>
-        <div class="footer__category-item">Tháp</div>
-        <div class="footer__category-item">Luxe</div>
-        <div class="footer__category-item">Container</div>
-        <div class="footer__category-item">Công viên</div>
-        <div class="footer__category-item">Nông trại</div>
+        <div class="footer__category-item m-2">Hồ bơi</div>
+        <div class="footer__category-item m-2">Bắc cực</div>
+        <div class="footer__category-item m-2">Khu cắm trại</div>
+        <div class="footer__category-item m-2">Lâu đài</div>
+        <div class="footer__category-item m-2">Nông thôn</div>
+        <div class="footer__category-item m-2">Nhà dưới lòng đất</div>
+        <div class="footer__category-item m-2">Nhà nhỏ</div>
+        <div class="footer__category-item m-2">Tháp</div>
+        <div class="footer__category-item m-2">Luxe</div>
+        <div class="footer__category-item m-2">Container</div>
+        <div class="footer__category-item m-2">Công viên</div>
+        <div class="footer__category-item m-2">Nông trại</div>
       </div>
 
       <div class="footer__help row">
@@ -766,18 +766,22 @@
       </div>
 
       <div class="footer__social row">
+        <div class="footer__social-icon">
+          <div>
+            <span>Tiếng việt (VN)</span>
+            <span>VND</span>
+          </div>
+          <div>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+        </div>
         <div class="footer__policy">
           <i class="fa-regular fa-copyright"></i>
           <div class="footer__policy-item">2025 Airbnb, Inc.</div>
           <div class="footer__policy-item">Quyền riêng tư</div>
           <div class="footer__policy-item">Điều khoản</div>
-        </div>
-        <div class="footer__social-icon">
-          <span>Tiếng việt (VN)</span>
-          <span>VND</span>
-          <i class="fa-brands fa-facebook"></i>
-          <i class="fa-brands fa-x-twitter"></i>
-          <i class="fa-brands fa-instagram"></i>
         </div>
       </div>
     </div>

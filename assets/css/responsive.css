@@ -1,0 +1,44 @@
+/* Tablet and mobile */
+@media (max-width: 1023px){
+    .header__search{
+        padding-top: 80px;
+    }
+    .header__logo-text{
+        display: none;
+    }
+}
+
+
+/* Tablet */
+@media (min-width: 741px) and (max-width: 1023px){
+    .m-2{
+        width: 50%;
+        padding: 0 25px;
+    }
+    
+    .m-3{
+        width: 33.333%;
+        padding: 0 16px;
+    }
+
+    .footer__category-item{
+        margin: 6px 0;
+    }
+ 
+    .footer__social{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer__social-icon{
+        padding-bottom: 10px;
+        justify-content: space-between;
+    }
+
+    .footer__social-icon span:first-child{
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+
+}
