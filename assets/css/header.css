@@ -28,12 +28,6 @@ header {
   color: var(--main-color);
 }
 
-.header__logo-text {
-  font-size: 2rem;
-  font-weight: 800;
-  padding-left: 8px;
-}
-
 .header__service-exp:hover,
 .header__user-host:hover,
 .header__user-icon:hover {
@@ -52,7 +46,7 @@ header {
 .header__user-host {
   font-size: 1.4rem;
   color: var(--text-dark-color);
-  font-weight: 600;
+  font-weight: 500;
   padding: 12px;
 }
 
@@ -100,7 +94,7 @@ header {
 }
 
 .header__service-home {
-  font-weight: 600;
+  font-weight: 500;
   color: var(--text-dark-color);
   padding: 0 14px;
 }
@@ -108,6 +102,7 @@ header {
 .header__service-exp {
   padding: 14px;
   color: var(--text-light-color);
+  font-weight: normal;
 }
 
 .search__bar {
@@ -147,7 +142,7 @@ header {
   justify-content: center;
   align-items: baseline;
   height: 100%;
-  padding: 15px 20px;
+  padding: 14px 20px;
   margin: 0;
   position: relative;
   border-radius: 35px;
@@ -156,7 +151,7 @@ header {
 }
 
 .search__place {
-  padding: 14px 50px 16px 30px;
+  padding: 14px 50px 14px 30px;
 }
 
 .search__guess {
@@ -164,7 +159,7 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 12px 0px 12px 32px;
+  padding: 11px 0px 11px 32px;
   position: relative;
   border-radius: 35px;
   border: none;
@@ -224,13 +219,13 @@ header {
   float: right;
 }
 
-.search--title {
+.search--title{
   min-width: 70px;
   display: block;
   text-align: left;
   font-size: 1.2rem;
+  font-weight: 500 !important;
   line-height: 1.6rem;
-  color: var(--text-dark-color);
   width: fit-content;
 }
 

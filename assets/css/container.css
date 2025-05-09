@@ -24,7 +24,6 @@
 }
 
 .category__list {
-  padding-bottom: 16px;
   display: flex;
   align-items: center;
   width: 75%;
@@ -32,8 +31,7 @@
 }
 
 .category__list::-webkit-scrollbar {
-  width: 6px; /* Chiều ngang scrollbar */
-  height: 6px; /* Dùng nếu có scroll ngang */
+  display:none;
 }
 
 .category__list::-webkit-scrollbar-thumb {
@@ -43,13 +41,34 @@
 
 .category__item {
   text-align: center;
-  padding: 0 20px;
+  padding-bottom: 8px;
   white-space: nowrap;
   cursor: pointer;
+  margin: 0 20px;
+}
+
+.category__item.current{
+  border-bottom: 2px solid #333;
+}
+
+.category__item.current .category__item-text{
+  color: var(--text-dark-color); 
+}
+
+.category__item.current:hover{
+  border-bottom: 2px solid #333;
+}
+
+.category__item.current .category__item-img{
+  opacity: 1;
 }
 
 .category__item:first-child {
   padding-left: 0;
+}
+
+.category__item:hover{
+  border-bottom: 2px solid #cdcdcd;
 }
 
 .category__item:hover .category__item-text {
@@ -71,7 +90,7 @@
 
 .category__item-text {
   color: var(--text-light-color);
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.2rem;
   transition: color ease 0.1s;
 }
@@ -106,7 +125,7 @@
   padding: 16px;
   border: 1px solid #e2e2e2;
   border-radius: 10px;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.4rem;
   transition: all ease 0.2s;
 }
@@ -115,6 +134,10 @@
   cursor: pointer;
   background-color: var(--background-hover-light-color);
   border: 1px solid #666;
+}
+
+.category__button-filter i{
+  padding-right: 8px;
 }
 
 /* Cac lua chon phong */
@@ -154,13 +177,12 @@
   padding: 4px 8px;
   border-radius: 20px;
   font-size: 1.4rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .product__item-like--icon {
   font-size: 2rem;
   color: #fff;
-  font-weight: 100;
   transition: transform 0.2s ease;
 }
 
@@ -180,7 +202,7 @@
   justify-content: space-between;
   padding: 4px;
   font-size: 1.4rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .product__item-info--desc {
@@ -198,7 +220,7 @@
 
 .product__item-info--price {
   margin-right: 4px;
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: underline;
   color: var(--text-dark-color);
 }
