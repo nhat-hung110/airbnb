@@ -82,6 +82,7 @@ header {
 /* Search bar */
 .header__search {
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   padding-top: 32px;
@@ -113,6 +114,8 @@ header {
   border-radius: 50px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.12);
   margin: 0 40px;
+  width: 90%;
+  max-width: 850px;
 }
 
 .search__bar:has(input:focus) {
@@ -148,29 +151,35 @@ header {
   border-radius: 35px;
   border: none;
   background-color: #fff;
+  width: 16.667%;
+}
+
+.search__place-wrapper{
+  width: 33.333%;
 }
 
 .search__place {
-  padding: 14px 50px 14px 30px;
+  padding: 14px 0 14px 30px;
+  width: 100%;
 }
 
 .search__guess {
   flex: 1;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 11px 0px 11px 32px;
+  padding: 11px 11px 11px 20px;
   position: relative;
   border-radius: 35px;
   border: none;
   background-color: #fff;
+  width: 33.333%;
 }
 
 .search__guess--add {
   display: flex;
   flex-direction: column;
   align-items: baseline;
-  padding-right: 80px;
 }
 
 .search__place::after,
@@ -207,11 +216,9 @@ header {
 .search__icon {
   width: 40px;
   height: 40px;
-  padding: 16px;
   color: #fff;
   background-color: var(--main-color);
   border-radius: 50px;
-  margin-right: 10px;
   font-size: 1.6rem;
   display: flex;
   justify-content: center;
@@ -220,7 +227,6 @@ header {
 }
 
 .search--title{
-  min-width: 70px;
   display: block;
   text-align: left;
   font-size: 1.2rem;

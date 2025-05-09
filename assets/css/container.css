@@ -64,7 +64,7 @@
 }
 
 .category__item:first-child {
-  padding-left: 0;
+margin-left: 2px;
 }
 
 .category__item:hover{
