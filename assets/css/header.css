@@ -1,6 +1,6 @@
 /* Header navbar */
 header {
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
 
 .header__navbar {
@@ -20,13 +20,12 @@ header {
   height: 80px;
   display: flex;
   align-items: center;
-  color: var(--main-color);
   cursor: pointer;
 }
 
 .header__logo-img {
-  width: 30px;
   height: 32px;
+  color: var(--main-color);
 }
 
 .header__logo-text {
@@ -39,7 +38,7 @@ header {
 .header__user-host:hover,
 .header__user-icon:hover {
   cursor: pointer;
-  background-color: var(--background-hover-color);
+  background-color: var(--background-hover-light-color);
   color: var(--text-dark-color);
   border-radius: 50px;
 }
@@ -66,12 +65,13 @@ header {
 .header__user-info {
   display: flex;
   align-items: center;
-  border: solid 2px var(--border-color);
+  border: solid 1px #e8e8e8;
   border-radius: 50px;
+  transition: box-shadow 0.2s ease;
 }
 
 .header__user-info:hover {
-  box-shadow: 0 1px 2px #b4b4b4;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .header__user-info-bar {
@@ -82,7 +82,7 @@ header {
 
 .header__user-info-acc {
   font-size: 3rem;
-  padding: 8px 16px;
+  padding: 8px 8px;
 }
 
 /* Search bar */
@@ -90,7 +90,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 30px;
+  padding-top: 32px;
 }
 
 .header__service {
@@ -114,29 +114,25 @@ header {
   position: relative;
   display: flex;
   align-items: center;
-  border: solid 1px var(--border-color);
+  border: solid 1px #e8e8e8;
   border-radius: 50px;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.12);
   margin: 0 40px;
 }
 
 .search__bar:has(input:focus) {
-  background-color: var(--background-hover-color);
+  background-color: var(--background-hover-dark-color);
 }
 
 .search__bar:has(input:focus) .search__check-in,
 .search__bar:has(input:focus) .search__check-out,
 .search__bar:has(input:focus) .search__guess {
-  background-color: var(--background-hover-color);
+  background-color: var(--background-hover-dark-color);
 }
 
 .search__bar:has(input:focus) .search__place {
   background-color: #fff;
   box-shadow: 0 1px 1px #999;
-}
-
-.search__place-wrapper {
-  height: 100%;
 }
 
 .search__place:has(input:focus):hover #search__place--text {
@@ -151,7 +147,7 @@ header {
   justify-content: center;
   align-items: baseline;
   height: 100%;
-  padding: 12px 20px;
+  padding: 15px 20px;
   margin: 0;
   position: relative;
   border-radius: 35px;
@@ -159,8 +155,8 @@ header {
   background-color: #fff;
 }
 
-.search__place{
-  padding: 0 50px 0 30px;
+.search__place {
+  padding: 14px 50px 16px 30px;
 }
 
 .search__guess {
@@ -196,7 +192,7 @@ header {
 .search__check-in:hover,
 .search__check-out:hover,
 .search__guess:hover {
-  background-color: var(--background-hover-color);
+  background-color: var(--background-hover-dark-color);
   cursor: pointer;
 }
 
@@ -240,7 +236,7 @@ header {
 
 .search--text {
   display: block;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   line-height: 1.8rem;
   color: var(--text-light-color);
 }
@@ -248,7 +244,8 @@ header {
 #search__place--text {
   border: none;
   padding: 0;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
 }
 
 #search__place--text:focus {
@@ -260,7 +257,44 @@ header {
 }
 
 .search__place:hover #search__place--text {
-  background-color: var(--background-hover-color);
+  background-color: var(--background-hover-dark-color);
+}
+/* header search on mobile */
+.header__search-mobile {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  display: none;
+  position: fixed;
+  z-index: 3;
+  background-color: #fff;
+}
+
+.search__bar-mobile {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 12px 24px 0;
+  height: 55px;
+  font-size: 1.4rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  border: 1px solid #e8e8e8;
+}
+
+.search__bar-mobile-icon,
+.search__bar-mobile-text {
+  padding: 0 6px;
+  line-height: 1.8rem;
+}
+
+.search__bar-mobile-icon {
+  font-size: 1.2rem;
+}
+
+.search__bar-mobile-text {
+  padding-top: 2px;
 }
 /* Suggest place */
 .suggest__place {
@@ -308,7 +342,7 @@ header {
 }
 
 .suggest__info:hover {
-  background-color: var(--background-hover-color);
+  background-color: var(--background-hover-dark-color);
   cursor: pointer;
 }
 
